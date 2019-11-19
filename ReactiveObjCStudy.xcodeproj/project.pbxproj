@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8412728BE3ED1FD3DCCDB798 /* libPods-ReactiveObjCStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 583BE4F95CC7F3D913530713 /* libPods-ReactiveObjCStudy.a */; };
 		8FCE969D2384274600802F2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE969C2384274600802F2E /* AppDelegate.m */; };
 		8FCE96A02384274600802F2E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE969F2384274600802F2E /* SceneDelegate.m */; };
 		8FCE96A32384274600802F2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE96A22384274600802F2E /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4ABF30515707DA20B13ACB0F /* Pods-ReactiveObjCStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCStudy.release.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCStudy/Pods-ReactiveObjCStudy.release.xcconfig"; sourceTree = "<group>"; };
+		583BE4F95CC7F3D913530713 /* libPods-ReactiveObjCStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveObjCStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCE96982384274600802F2E /* ReactiveObjCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveObjCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCE969B2384274600802F2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FCE969C2384274600802F2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		8FCE96AA2384276B00802F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FCE96AC2384276B00802F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FCE96AD2384276B00802F2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5D2A299CF7FF99D2080B2B2 /* Pods-ReactiveObjCStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCStudy.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCStudy/Pods-ReactiveObjCStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8412728BE3ED1FD3DCCDB798 /* libPods-ReactiveObjCStudy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B91AFDE772393D0D93F92B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				583BE4F95CC7F3D913530713 /* libPods-ReactiveObjCStudy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3965BD46FF93BF65E5900D77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5D2A299CF7FF99D2080B2B2 /* Pods-ReactiveObjCStudy.debug.xcconfig */,
+				4ABF30515707DA20B13ACB0F /* Pods-ReactiveObjCStudy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8FCE968F2384274600802F2E = {
 			isa = PBXGroup;
 			children = (
 				8FCE969A2384274600802F2E /* ReactiveObjCStudy */,
 				8FCE96992384274600802F2E /* Products */,
+				3965BD46FF93BF65E5900D77 /* Pods */,
+				2B91AFDE772393D0D93F92B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +108,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FCE96B12384276B00802F2E /* Build configuration list for PBXNativeTarget "ReactiveObjCStudy" */;
 			buildPhases = (
+				D4DF0930AA074A9984BD0C00 /* [CP] Check Pods Manifest.lock */,
 				8FCE96942384274600802F2E /* Sources */,
 				8FCE96952384274600802F2E /* Frameworks */,
 				8FCE96962384274600802F2E /* Resources */,
@@ -140,6 +166,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4DF0930AA074A9984BD0C00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactiveObjCStudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8FCE96942384274600802F2E /* Sources */ = {
@@ -287,6 +338,7 @@
 		};
 		8FCE96B22384276B00802F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D2A299CF7FF99D2080B2B2 /* Pods-ReactiveObjCStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +356,7 @@
 		};
 		8FCE96B32384276B00802F2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ABF30515707DA20B13ACB0F /* Pods-ReactiveObjCStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
