@@ -58,6 +58,32 @@ typedef void (^xxSignInResponse)(BOOL);
     [self.view addSubview:self.loginButton];
     
     [self bindsignal];
+    [self testSignal];
+}
+
+
+-(void)testSignal{
+    //创建信号
+        RACSignal * single = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            NSLog(@"2");
+            [subscriber sendNext:@"发送了信号"];//发送信号
+            NSLog(@"4");
+            
+           [subscriber sendCompleted];//发送完成，订阅自动移除
+            //RACDisposable 可用于手动移除订阅
+            return [RACDisposable disposableWithBlock:^{
+                NSLog(@"5-RACDisposable");
+            }];
+        }];
+        //订阅信号
+        NSLog(@"1");
+        [single subscribeNext:^(id x) {
+            NSLog(@"3");
+            NSLog(@"信号的值：%@",x);
+        }];
+    
+    //手动移除订阅
+       [disposable dispose];
 }
 
 -(void)bindsignal{
