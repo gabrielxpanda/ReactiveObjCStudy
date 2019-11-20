@@ -1,16 +1,20 @@
 PODS:
+  - MBProgressHUD (1.1.0)
   - ReactiveObjC (3.1.1)
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 1.1.0)
   - ReactiveObjC
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - MBProgressHUD
     - ReactiveObjC
 
 SPEC CHECKSUMS:
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
-PODFILE CHECKSUM: 73d158a2f906d5d2f7e6b931b8b65975138fd634
+PODFILE CHECKSUM: 036a5c845042af531036c5fffd8ada1697f95bc8
 
 COCOAPODS: 1.8.0

@@ -12,7 +12,7 @@
 
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-
+#import <MBProgressHUD.h>
 
 typedef void (^xxSignInResponse)(BOOL);
 
@@ -102,6 +102,7 @@ typedef void (^xxSignInResponse)(BOOL);
       [[[[self.loginButton
       rac_signalForControlEvents:UIControlEventTouchUpInside]
       doNext:^(id x) {
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
         self.loginButton.enabled = NO;
         self.loginButton .backgroundColor = [UIColor clearColor];
@@ -110,11 +111,17 @@ typedef void (^xxSignInResponse)(BOOL);
         return [self signInSignal];
       }]
       subscribeNext:^(NSNumber *signedIn) {
-          self.loginButton.enabled = YES;
-          self.loginButton .backgroundColor = [UIColor orangeColor];
+           self.loginButton.enabled = YES;
+           self.loginButton .backgroundColor = [UIColor orangeColor];
            BOOL success = [signedIn boolValue];
-          NSLog(@"登录成功！");
-       
+          if (success) {
+              NSLog(@"登录成功！");
+            
+          }else{
+              NSLog(@"登录失败！");
+          }
+          [MBProgressHUD hideHUDForView:self.view animated:YES];
+         
       }];
     
 }
@@ -171,6 +178,7 @@ typedef void (^xxSignInResponse)(BOOL);
 
 
 -(RACSignal *)signInSignal {
+    
   return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
     [self.signInService
      signInWithUsername:self.usernameTF.text
@@ -181,5 +189,6 @@ typedef void (^xxSignInResponse)(BOOL);
      }];
     return nil;
   }];
+    
 }
 @end

@@ -8,4 +8,5 @@ project './ReactiveObjCStudy.xcodeproj'
 target 'ReactiveObjCStudy' do
 
 	pod 'ReactiveObjC'
+  pod 'MBProgressHUD', '~> 1.1.0'
 end
