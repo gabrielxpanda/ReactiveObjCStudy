@@ -68,7 +68,6 @@ typedef void (^xxSignInResponse)(BOOL);
             NSLog(@"2");
             [subscriber sendNext:@"发送了信号"];//发送信号
             NSLog(@"4");
-            
            [subscriber sendCompleted];//发送完成，订阅自动移除
             //RACDisposable 可用于手动移除订阅
             return [RACDisposable disposableWithBlock:^{
@@ -83,7 +82,7 @@ typedef void (^xxSignInResponse)(BOOL);
         }];
     
     //手动移除订阅
-       [disposable dispose];
+      // [disposable dispose];
 }
 
 -(void)bindsignal{
